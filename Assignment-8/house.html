@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> House Price Prediction</title>
+    <link rel="stylesheet" type="text/css" href="./static/mycss.css" , media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="./static/mycss2.css" , media="screen,projection" />
+</head>
+
+<body>
+    <div id="body">
+        <div class='background'>
+            <div class="text1">
+                <h1> HOUSE PRICE PREDICTION</h1>
+
+
+            </div>
+        </div>
+        <div class=paragraph1>
+
+
+        </div>
+
+        <div id=result>
+
+            <p> {{pred}}</p>
+        </div>
+
+        <div class=paragraph2>
+
+        </div>
+        <div class=form>
+
+            <head>
+                <meta charset='utf-8'>
+                <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+                <title>House Price Prediction</title>
+                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                <link rel='stylesheet' type='text/css' media='screen'
+                    href="{{ url_for('static', filename='css/main.css') }}">
+                <script src='main.js'></script>
+            </head>
+
+            <body>
+                <div class="register_page">
+                    <div class="form">
+                        <form action="{{url_for('predict')}}" method="POST" class="text">
+                            Bedrooms <input type="number" name='bedrooms' placeholder="No of Bedrooms"
+                                class='inside'><br>
+                            Bathrooms <input type="number" name='bathrooms' placeholder="Enter the no of Bathrooms"
+                                class='inside'><br>
+                            Floors <input type="number" name='floors' placeholder="No of Floors" class='inside'><br>
+                            SQFT_Living <input type="number" name='sqft_living' placeholder="Square feet of living"
+                                class='inside'><br>
+                            <input type="submit" value="predict" class="submit">
+                        </form>
+                        <p class="price"> House Price is $ {{data}}</p>
+                    </div>
+
+                </div>
+
+
+            </body>
+
+</html>
